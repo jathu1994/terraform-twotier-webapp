@@ -5,12 +5,6 @@ variable "default_tags" {
   description = "deafult tags"
 }
 
-# varible for referencing the prefix for networking folder
-# variable "prefix" {
-#   default     = "acs_group_10"
-#   type        = string
-#   description = "Name prefix"
-# }
 
 # variable to be used for referencing the public subnet cidr range
 variable "public_cidrs" {

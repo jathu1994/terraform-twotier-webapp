@@ -1,6 +1,6 @@
 # configurations for launching the Ec2 instances
 resource "aws_launch_configuration" "launch_configuration" {
-  name_prefix   = "${local.prefix_all}-launch_config-${var.env}"
+  name          = "${local.prefix_all}-launch_config-${var.env}"
   image_id      = data.aws_ami.ami_latest.id
   instance_type = var.instance_type
   security_groups    = [aws_security_group.sg_webserver.id]
@@ -28,9 +28,6 @@ resource "aws_autoscaling_group" "auto_scaling_group" {
   depends_on            = [aws_lb.application_load_balancer]
   target_group_arns     = [aws_lb_target_group.targetgroup.arn]
   health_check_type     = "ELB"
-  lifecycle {
-    create_before_destroy = true
-  }
   
   tags = [
     {

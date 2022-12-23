@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
-    bucket = "prod-group-10-finalproject" //bucket to save terraform state of dev environment
-    key    = "prod-WebServer/terraform.tfstate"
+    bucket = "prod-finalproject-acs730-group10" //bucket to save terraform state of dev environment
+    key    = "dev-Network/terraform.tfstate"
     region = "us-east-1"
   }
 }

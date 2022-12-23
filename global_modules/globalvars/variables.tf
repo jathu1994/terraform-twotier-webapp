@@ -2,7 +2,7 @@
 output "default_tags" {
   value = {
     "Group"   = "group_10"
-    "Members" = "Anuj,Jatharthan,Chathumi"
+    "Members" = "Anuj_Jatharthan_Chathumi"
   }
 }
 

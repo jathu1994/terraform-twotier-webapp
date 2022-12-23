@@ -17,7 +17,7 @@ data "aws_ami" "ami_latest" {
 data "terraform_remote_state" "network" {
   backend = "s3"
   config = {
-    bucket = "${var.env}-group05-finalproject-jatha" // bucket to get state according to different environments
+    bucket = "${var.env}-finalproject-acs730-group10" // bucket to get state according to different environments
     key    = "${var.env}-Network/terraform.tfstate"
     region = "us-east-1"
   }

@@ -4,7 +4,7 @@ module "globalvars" {
 }
 
 #
-module "dev-webServer" {
+module "prod-webServer" {
   source            = "../../../global_modules/webserver"
   env               = var.env
   instance_type     = var.instance_type

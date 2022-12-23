@@ -1,8 +1,8 @@
 # Referencing the s3 bucket for the remote state storage 
 terraform {
   backend "s3" {
-    bucket = "project1bucket1234"
-    key    = "env-development/networking"
+    bucket = "group10-acs730-dev-bucket"
+    key    = "dev-Network/terraform.tfstate"
     region = "us-east-1"
   }
 }

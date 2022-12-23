@@ -1,5 +1,5 @@
 # referencing the networking variables for dev branch
-module "network-dev" {
+module "network-prod" {
   source        = "../../../global_modules/networking"
   env           = var.env
   vpc_cidr      = var.vpc_cidr

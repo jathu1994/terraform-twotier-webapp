@@ -1,15 +1,14 @@
-#imorting global varibales
-module "globalvars" {
-  source = "../../../global_modules/globalvars"
+# referencing the networking variables for dev branch
+module "network-staging" {
+  source        = "../../../global_modules/networking"
+  env           = var.env
+  vpc_cidr      = var.vpc_cidr
+  public_cidrs  = var.public_cidrs
+  private_cidrs = var.private_cidrs
+  default_tags = module.global_variables.default_tags
 }
 
-#
-module "dev-webServer" {
-  source            = "../../../global_modules/webserver"
-  env               = var.env
-  instance_type     = var.instance_type
-  linux_key         = var.linux_key
-  prefix            = module.globalvars.prefix
-  default_tags      = module.globalvars.default_tags
-
+# referencing the global varibles for dev branch
+module "global_variables" {
+  source = "../../../global_modules/globalvars"
 }

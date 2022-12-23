@@ -1,17 +1,23 @@
-variable "instance_type" {
-  default     = "t3.small"
-  description = "Instance Type for staging deployment"
-  type        = string
-}
-
 variable "env" {
-  default     = "staging"
+  default     = "prod"
   type        = string
-  description = "Environment"
+  description = "Deployment Environment"
 }
 
-variable "linux_key" {
-  default     = "/home/ec2-user/.ssh/staging.pub"
-  description = "Staging Key"
+variable "public_cidrs" {
+  default     = ["10.100.1.0/24", "10.100.2.0/24", "10.100.3.0/24"]
+  type        = list(string)
+  description = "Public Subnets"
+}
+
+variable "private_cidrs" {
+  default     = ["10.100.4.0/24", "10.100.8.0/24", "10.100.9.0/24"]
+  type        = list(string)
+  description = "Private Subnets"
+}
+
+variable "vpc_cidr" {
+  default     = "10.100.0.0/16"
   type        = string
+  description = "VPC"
 }

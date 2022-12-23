@@ -2,7 +2,7 @@
 sudo yum -y update
 sudo yum -y install httpd
 private_ip=`curl http://169.254.169.254/latest/meta-data/local-ipv4`
-sudo aws s3 cp s3://${env}-finalproject-acs730/images/seneca.jpg /var/www/html
+sudo aws s3 cp s3://${env}-finalproject-acs730-group10/images/seneca.jpg /var/www/html
 
 
 echo "<html>
@@ -11,7 +11,7 @@ echo "<html>
  </head>
  <body>
 <center>
-    <h1>private IP is $private_ip</h1>
+    <h1>private_IP is $private_ip</h1>
     <h1>Running on ${env} </h1>
 </center>
 

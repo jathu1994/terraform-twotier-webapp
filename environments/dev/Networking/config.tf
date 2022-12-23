@@ -2,7 +2,7 @@
 terraform {
   backend "s3" {
     bucket = "group10-acs730-dev-bucket"
-    key    = "staging-Network/terraform.tfstate"
+    key    = "dev-Network/terraform.tfstate"
     region = "us-east-1"
   }
 }

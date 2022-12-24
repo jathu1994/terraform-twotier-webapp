@@ -60,6 +60,7 @@ resource "aws_subnet" "private_subnets" {
   vpc_id            = aws_vpc.project_vpc.id
   cidr_block        = var.private_cidrs[count.index]
   availability_zone = data.aws_availability_zones.available.names[count.index]
+  map_public_ip_on_launch = false
   tags = merge(
     local.default_tags, {
       Name = "${local.prefix_all}-private-subnet-${count.index}"

@@ -32,12 +32,12 @@ resource "aws_autoscaling_group" "auto_scaling_group" {
   tags = [
     {
       key                 = "Name"
-      value               = "AutoScaledEC2"
+      value               = "${local.prefix_all}-AutoScaledEC2"
       propagate_at_launch = true
     },
     {
       key                 = "Environment"
-      value               = "Prod"
+      value               = "${var.env}"
       propagate_at_launch = true
     },
   ]

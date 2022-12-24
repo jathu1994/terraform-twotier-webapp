@@ -14,7 +14,7 @@ variable "public_cidrs" {
 
 # variable for defining the private subnet range for public subnets
 variable "private_cidrs" {
-  default     = ["10.100.4.0/24", "10.100.8.0/24", "10.100.9.0/24"]
+  default     = ["10.100.4.0/24", "10.100.5.0/24", "10.100.6.0/24"]
   type        = list(string)
   description = "Private Subnet range"
 }

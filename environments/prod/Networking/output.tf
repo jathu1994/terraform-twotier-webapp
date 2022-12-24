@@ -1,4 +1,3 @@
-
 # Output variables for Public Subnets
 output "public_subnet_ids" {
   value = module.network-prod.public_subnet_ids

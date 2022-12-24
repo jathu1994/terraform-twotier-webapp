@@ -35,7 +35,7 @@ variable "maximum_size" {
 
 
 variable "path_to_ssh_key" {
-  default     = "/home/ec2-user/.ssh/Group-No-5-prod.pub"
+  default     = "/home/ec2-user/.ssh/prod.pub"
   description = "Path to the public key to use in Linux VMs provisioning"
   type        = string
 }
